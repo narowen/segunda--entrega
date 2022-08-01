@@ -249,6 +249,10 @@ footer h4 {
         margin: 10px auto;
     }
 
+    #contacto form {
+        width: 75vw;
+    }
+
     .consultaPrecio {
         height: 150px;
         width: 60vw;
