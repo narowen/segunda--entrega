@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: #444444;
+    background-color: rgb(238, 206, 170);
+}
+
+h1 {
+    text-align: center;
+    grid-area: servicios;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+/* HEADER */
+.nav {
+    background-color: rgb(204, 174, 20);
+    border-bottom: #e7e312e8 solid 2px;
+    text-transform: uppercase;
+    z-index: 2;
+    font-size: 1.3rem;
+    grid-area: header;
+}
+
+.tamlogo {
+    width: 65px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+/* INICIO */
+.imagenFondo {
+    background-image: url("../img/postre.jpg");
+    background-size: cover;
+    height: 100vh;
+    position: sticky;
+
+}
+
+.consultaPrecio {
+    border-top: 2px solid black;
+    border-radius: 4px;
+    height: 225px;
+    width: 500px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 20px 2px 10px;
+    opacity: 90%;
+    max-width: 90%;
+}
+
+.precios {
+    text-decoration: none;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #b7c03f;
+}   
+
+/* PRODUCTOS */
+#productos {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#productos img {
+    height: 200px;
+    border-radius: 20px;
+}
+
+.galeria {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #444444;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* SERVICIOS */
+.seccion {
+    margin: 50px;
+    padding: 30px;
+    border: solid 1px #8d8f84;
+    border-radius: 4px;
+}
+
+.serviciosA {
+    grid-area: serviciosA;
+    text-align: center;
+}
+
+.serviciosB {
+    grid-area: serviciosB;
+    text-align: center;
+}
+
+.serviciosC {
+    grid-area: serviciosC;
+    text-align: center;
+}
+
+.serviciosD {
+    grid-area: serviciosD;
+    text-align: center;
+}
+
+.gridServicios {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "servicios servicios"
+    "serviciosB serviciosA"
+    "serviciosD serviciosC"
+    "footer footer"
+    
+    ;
+}
+
+/* UBICACION */
+
+.textoUbicacion {
+    width: 300px;
+    text-align: center;
+}
+
+.ubicacion {
+    width: 300px;
+    text-align: center;
+}
+
+#mapa {
+    text-align: center;
+    /* margin-top: 20px; */
+}
+
+/* CONTACTO */
+
+#contacto {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50vw;
+}
+
+.campo {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.tamBotonForm {
+    width: 200px;
+    margin: auto;
+}
+
+/* FOOTER */
+footer {
+    background-color: #FEF5ED;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-area: footer;
+}
+
+footer nav {
+    flex-direction: column;
+}
+
+footer ul li {
+    list-style-type: none;
+    display: inline-block;
+    
+}
+
+footer ul li a {
+    margin-left: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    border-radius: 4px;
+    font-size: 0.938rem;
+}
+
+footer h4 {
+    color: #99A799;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    .gridServicios {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "servicios"
+        "serviciosB"
+        "serviciosA"
+        "serviciosD"
+        "serviciosC"
+        "footer"
+    }
+
+    .seccion {
+        margin: 10px;
+        padding: 10px;
+        border: solid 1px #8d8f84;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+    
+    #contacto {
+        flex-direction: column;
+    }
+
+    .campo {
+        display: block;
+        width: 100%;
+        margin: 10px;
+    }
+
+    .consultaPrecio {
+        height: 150px;
+        width: 60vw;
+    }
+
+    .precios {
+        font-size: 0.875rem;
+        padding: 8px 20px;
+    }
+}
